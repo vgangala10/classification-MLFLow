@@ -6,3 +6,5 @@ EPOCHS: 1
 CLASSES: 2
 WEIGHTS: imagenet
 LEARNING_RATE: 0.01
+PARAMS_METRICS: ["accuracy", "precision", "recall", "AUC"]
+PARAMS_LOSS_FUNCTION: "categorical_crossentropy"
