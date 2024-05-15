@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Classification-MLFlow"
 AUTHOR_USER_NAME = "gvharsha2000"
-SRC_REPO = "cnnClassifier"
+SRC_REPO = "imageClassifier"
 AUTHOR_EMAIL = "gvharsha2000@gmail.com"
 
 
