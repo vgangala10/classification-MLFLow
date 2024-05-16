@@ -19,7 +19,12 @@ class Training:
         self.model.compile(
             optimizer=tf.keras.optimizers.Adam(),
             loss=self.config.params_loss_function,
-            metrics=self.config.params_metrics
+            metrics=[
+                'accuracy',
+                tf.keras.metrics.Precision(name='precision'),
+                tf.keras.metrics.Recall(name='recall'),
+                tf.keras.metrics.AUC(name='AUC')
+            ]
         )
 
     def train_valid_generator(self):

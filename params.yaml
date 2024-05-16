@@ -2,9 +2,9 @@ AUGMENTATION: True
 IMAGE_SIZE: [224, 224, 3] # as per VGG 16 model
 BATCH_SIZE: 16
 INCLUDE_TOP: False
-EPOCHS: 1
+EPOCHS: 3
 CLASSES: 2
 WEIGHTS: imagenet
-LEARNING_RATE: 0.01
+LEARNING_RATE: 0.005
 PARAMS_METRICS: ["accuracy", "precision", "recall", "AUC"]
 PARAMS_LOSS_FUNCTION: "categorical_crossentropy"
