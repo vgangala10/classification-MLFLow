@@ -5,8 +5,8 @@ stages:
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: eafb0fe0f26ede09af89a8bfd489a4a1
-      size: 562
+      md5: 866b6a999db9332115ae00937d27b4f7
+      size: 545
     - path: src/imageClassifier/pipeline/stage_01_data_ingestion.py
       hash: md5
       md5: 255e78ad30c5378aa6526cb317fa9572
@@ -22,8 +22,8 @@ stages:
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: eafb0fe0f26ede09af89a8bfd489a4a1
-      size: 562
+      md5: 866b6a999db9332115ae00937d27b4f7
+      size: 545
     - path: src/imageClassifier/pipeline/stage_02_prepare_base_model.py
       hash: md5
       md5: db1d0c9b0a602d47271481befbe860e9
@@ -41,7 +41,7 @@ stages:
     outs:
     - path: artifacts/prepare_base_model
       hash: md5
-      md5: 9946294f6f98f80751106dde2a3d1997.dir
+      md5: 415468cef10bd214c8172f782abc2071.dir
       size: 118058104
       nfiles: 2
   training:
@@ -54,13 +54,13 @@ stages:
       nfiles: 465
     - path: artifacts/prepare_base_model
       hash: md5
-      md5: 9946294f6f98f80751106dde2a3d1997.dir
+      md5: 415468cef10bd214c8172f782abc2071.dir
       size: 118058104
       nfiles: 2
     - path: config/config.yaml
       hash: md5
-      md5: eafb0fe0f26ede09af89a8bfd489a4a1
-      size: 562
+      md5: 866b6a999db9332115ae00937d27b4f7
+      size: 545
     - path: src/imageClassifier/pipeline/stage_03_model_training.py
       hash: md5
       md5: 8e530d467ed117934ee5816cb772922c
@@ -75,9 +75,9 @@ stages:
         - 224
         - 3
     outs:
-    - path: artifacts/training/model.h5
+    - path: model/model.h5
       hash: md5
-      md5: ecaf7cdb46d4ab1a44bd29335750a8c3
+      md5: e0759355a7c48857e379130e2f8cf5d3
       size: 59544224
   evaluation:
     cmd: python src/imageClassifier/pipeline/stage_04_model_evaluation.py
@@ -87,14 +87,14 @@ stages:
       md5: 33ed59dbe5dec8ce2bb8e489b55203e4.dir
       size: 58936381
       nfiles: 465
-    - path: artifacts/training/model.h5
-      hash: md5
-      md5: ecaf7cdb46d4ab1a44bd29335750a8c3
-      size: 59544224
     - path: config/config.yaml
       hash: md5
-      md5: eafb0fe0f26ede09af89a8bfd489a4a1
-      size: 562
+      md5: 866b6a999db9332115ae00937d27b4f7
+      size: 545
+    - path: model/model.h5
+      hash: md5
+      md5: e0759355a7c48857e379130e2f8cf5d3
+      size: 59544224
     - path: src/imageClassifier/pipeline/stage_04_model_evaluation.py
       hash: md5
       md5: 493cb255c2ac2ccff4ba2501276d5964
@@ -109,5 +109,5 @@ stages:
     outs:
     - path: scores.json
       hash: md5
-      md5: 7515030699889c555f50286368ee0113
+      md5: 10a57b2a801ef533732d85852a014476
       size: 57
