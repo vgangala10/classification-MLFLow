@@ -3,7 +3,7 @@ from src.imageClassifier.components.model_evaluation_mlflow import Evaluation
 from src.imageClassifier import logger
 
 
-
+#trying it out
 STAGE_NAME = "Evaluation stage"
 
 
